@@ -32,7 +32,24 @@
       <version>3.15.7</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-client</artifactId>
+      <version>2.10.0</version>
+    </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-mapreduce -->
+    <dependency>
+      <groupId>org.apache.hbase</groupId>
+      <artifactId>hbase-mapreduce</artifactId>
+      <version>2.4.2</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.glassfish</groupId>
+          <artifactId>javax.el</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 
 
 
