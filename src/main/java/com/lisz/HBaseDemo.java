@@ -96,6 +96,7 @@ public class HBaseDemo {
 	@Test
 	public void scan() throws Exception{
 		Scan scan = new Scan();
+		// scan.setCaching(1000);
 		// Specify the range of row key, which is sorted in alphabet order.
 //		scan.withStartRow();
 //		scan.withStopRow();
@@ -114,6 +115,7 @@ public class HBaseDemo {
 
 			System.out.println("name: " + name + " age: " + age + " gender: " + gender) ;
 		}
+		scanner.close();
 	}
 
 	@Test
