@@ -72,7 +72,7 @@ public class HBaseDemo {
 	@Test
 	public void get() throws Exception{
 		Get get = new Get(Bytes.toBytes("2222"));
-		// User can only get the column family: "cf:name", "cf:age", "cf:name",
+		// By default user can get all colums, but in this example, only get the column family: "cf:name", "cf:age", "cf:name",
 		// will throw Exception when trying to get "cf:other", since Hbase could have millions of columns,
 		// this is to avoid unnecessary IO
 		get.addColumn(Bytes.toBytes("cf"), Bytes.toBytes("name"));
