@@ -39,7 +39,7 @@ public class HBaseDemo {
 	@Test
 	public void createTable() throws Exception{
 		if (admin.tableExists(tableName)){
-			// Disable table first before delete it
+			// Disable table first before delete it, like in the cli.
 			admin.disableTable(tableName);
 			admin.deleteTable(tableName);
 		}
