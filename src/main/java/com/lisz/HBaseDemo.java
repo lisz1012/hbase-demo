@@ -27,6 +27,7 @@ public class HBaseDemo {
 
 	@Before
 	public void init() throws IOException {
+		// We can use factory pattern to create table object with above configs
 		conf = HBaseConfiguration.create();
 		conf.set("hbase.zookeeper.quorum", "hadoop-02,hadoop-03,hadoop-04");
 		conn = ConnectionFactory.createConnection(conf);
