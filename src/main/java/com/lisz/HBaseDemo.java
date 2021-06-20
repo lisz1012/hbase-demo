@@ -290,8 +290,8 @@ public class HBaseDemo {
 	@After
 	public void destroy(){
 		try {
-			table.close();
-			admin.close();
+			table.close(); // 原先有落地缓冲区数据的flushCommits，现在的2.3.5好像没有这个了
+			admin.close(); // 空的
 			conn.close();
 		} catch (IOException e) {
 			e.printStackTrace();
